@@ -1,1 +1,229 @@
+.header__logo, .header__phone, .header-list__item, .instagram {
+  font-family: "FuturaBookC", "Roboto", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1rem;
+}
 
+.header__wrapper, .instagram {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 376px) {
+  .top-image-mobile {
+    display: none;
+  }
+}
+
+.container {
+  max-width: 88%;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #131313;
+}
+
+.header__wrapper {
+  height: 83px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__logo {
+  font-weight: 600;
+  text-transform: uppercase;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.header__phone {
+  color: #E3B873;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  font-weight: 550;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.header__request-call {
+  background: #E3B873;
+  border: 0;
+  -webkit-box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+          box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+  border-radius: 2px;
+  font-size: 13px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  width: 12em;
+  height: 2.3em;
+  font-weight: 550;
+  cursor: pointer;
+}
+
+.header-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header-list__item {
+  color: #fff;
+  text-transform: uppercase;
+  padding: 1em 1.5em;
+}
+
+.active {
+  color: #E3B873;
+  cursor: pointer;
+}
+
+.yellow {
+  color: #E3B873;
+}
+
+.top-application {
+  background-color: #131313;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tops {
+  width: 94%;
+}
+
+.top-image {
+  float: right;
+}
+
+.instagram {
+  width: 6%;
+  color: #E3B873;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+}
+
+.top-offer {
+  background-image: url(assets/top-image.png);
+  background-repeat: no-repeat;
+  padding-top: 13%;
+  padding-bottom: 16%;
+  padding-left: 5%;
+}
+
+.top-offer h2 {
+  font-family: "Yeseva One", "Arial", sans-serif;
+  font-size: 40px;
+  line-height: 53px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.top-offer p {
+  font-family: "FuturaBookC", "Roboto", sans-serif;
+  font-size: 22px;
+  line-height: 30px;
+  color: #FFFFFF;
+  margin-top: 2%;
+}
+
+.calculate-button {
+  background: #E3B873;
+  border: 0;
+  -webkit-box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+          box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+  border-radius: 2px;
+  font-size: 13px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  width: 207px;
+  height: 51px;
+  font-weight: 550;
+  cursor: pointer;
+  margin-top: 3%;
+}
+
+.submit-button {
+  margin-top: 3%;
+  margin-left: 1%;
+  background: none;
+  border: 1px #fff solid;
+  -webkit-box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+          box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+  border-radius: 2px;
+  font-size: 13px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  width: 207px;
+  height: 51px;
+  font-weight: 550;
+  cursor: pointer;
+}
+
+@media (max-width: 375px) {
+  .header__request-call {
+    display: none;
+  }
+  .header__menu {
+    display: none;
+  }
+  .header__phone {
+    color: #fff;
+    -webkit-text-decoration-line: none;
+            text-decoration-line: none;
+  }
+  .container {
+    max-width: 340px;
+    margin: 0 auto;
+  }
+  .tops {
+    width: 100%;
+  }
+  .top-image {
+    display: none;
+  }
+  .instagram {
+    display: none;
+  }
+  .top-offer {
+    background-image: url(assets/top-image-mobile.png);
+    background-repeat: no-repeat;
+    padding-top: 20%;
+  }
+  .top-offer h2 {
+    font-size: 23px;
+    line-height: 31px;
+  }
+  .top-offer p {
+    font-size: 18px;
+    line-height: 24px;
+    width: 90%;
+    padding-bottom: 4%;
+  }
+  .calculate-button, .submit-button {
+    width: 338px;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  br {
+    display: none;
+  }
+}
+/*# sourceMappingURL=index.css.map */
