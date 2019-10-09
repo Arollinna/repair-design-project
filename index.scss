@@ -15,13 +15,17 @@ $yellow: #E3B873;
     .top-image-mobile {
         display: none;
     }
+    .image-mobile {
+        display: none;
+    }
 }
-
+.body {
+    overflow: hidden;
+}
 .container {
     max-width: 88%;
     margin: 0 auto;
 }
-
 .header {
     background-color: #131313;
 
@@ -30,14 +34,12 @@ $yellow: #E3B873;
         height: 83px;
         justify-content: space-between;
     }
-
     &__logo {
         font-weight: 600;
         @extend %header-font;
         text-transform: uppercase;
         flex-shrink: 0;
     }
-
     &__phone {
         @extend %header-font;
         color: $yellow;
@@ -60,11 +62,10 @@ $yellow: #E3B873;
         cursor: pointer;
     }
 }
-
 .header-list {
     display: flex;
     justify-content: space-between;
-    
+
     &__item {
         @extend %header-font;
         color: #fff;
@@ -72,29 +73,43 @@ $yellow: #E3B873;
         padding: 1em 1.5em;
     }
 }
-
 .active {
     color: $yellow;
     cursor: pointer;
 } 
-
 .yellow {
     color: $yellow;
 }
-
 .top-application {
     background-color: #131313;
     display: flex;
+    position: relative;
 }
-
+.scroll {
+    width: 247px;
+    height: 97px;
+    background-color: #131313;
+    position: absolute;
+    bottom: -48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.scroll h3 {
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-family: "Yeseva One", "Arial", sans-serif;
+    margin-right: 15px;
+}
 .tops {
     width: 94%;
 }
-
 .top-image {
     float: right;
 }
-
 .instagram {
     width: 6%;
     color: $yellow;
@@ -104,7 +119,6 @@ $yellow: #E3B873;
     justify-content: center;
     text-transform: uppercase;
 }
-
 .top-offer {
     background-image: url(assets/top-image.png);
     background-repeat: no-repeat;
@@ -157,17 +171,132 @@ $yellow: #E3B873;
     font-weight: 550;
     cursor: pointer;
 }
+.completed-projects {
+    background-color: #131313;
+    &__row {
+        display: flex;
+    } 
+    &__list {
+        display: flex;
+        padding-top: 70px;
+        padding-left: 40%;
+        padding-bottom: 35px;
+        width: 623px;
+        justify-content: space-between;
+        color: rgba(255, 255, 255, 0.500);
+        font-family: "Yeseva One", "Arial", sans-serif;
+        font-size: 14px;
+        line-height: 19px;
+        text-transform: uppercase;
+    }
+    &__list-item-active {
+        color: $yellow;
+        opacity: 1;
+        text-decoration-line: underline;
+        cursor: pointer;
+    }
+    &__list-item:hover {
+        color: $yellow;
+        cursor: pointer;
+    }
+    &__data {
+        width: 442px;
+        height: 390px;
+        color: #fff;
+        padding-left: 6%; 
+    }
+    &__grid {
+        display: grid;
+        grid-gap: 34px;
+    }
+    &__grid-item-1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    &__grid-item-1 p {
+        font-size: 16px !important;
+        line-height: 27px !important;
+    }
+    &__data h2, h3 {
+        text-transform: uppercase;
+        color: $yellow;
+        font-weight: 550;
+    }
+    &__data h2 {
+        font-size: 27px;
+        line-height: 37px;
+        padding-bottom: 15px;
+    }
+    &__data h3 {
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 10px;
+    }
+    &__grid p {
+        font-size: 15px;
+        line-height: 20px;
+        font-family: "FuturaBookC", "Roboto", sans-serif;
+    }
+    &__carousel-points {
+        margin-top: 85px;
+        @extend %flex;
+        justify-content: space-between;
+        width: 230px;
+    }
+    &__carousel-arrows {
+        height: 20px;
+        width: 35px;
+        cursor: pointer;
+        filter: brightness(5);
+    }
+    .left-arrow {
+        transform: rotate(180deg);
+    }
+    &__wow {
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.3);
+        width: 10px;
+        height: 10px;
+        left: 50%; 
+        display: inline-block;  
+    }
+    &__wow:hover {
+        background-color: #FFFFFF; 
+    }
+    &__wow.active {
+        background-color: #fff;
+    } 
+    &__images {
+        margin-left: 44px;
+    }
+    &__commode {
+        position: relative;
+    }
+    &__arrow {
+        position: absolute;
+        transform: rotate(-90deg);
+        width: 40px;
+        top: 45%;
+        right: 20%;
+    }
+    &__arrow:hover {
+        cursor: pointer;
+    }
+}
+.yellow-line {
+    background-color: $yellow;
+    width: 51px;
+    height: 1px;
+}
 
 @media (max-width: 375px) {
     .header {
         &__request-call {
             display: none;
         }
-
         &__menu {
             display: none;
         }
-
         &__phone {
             color: #fff;
             text-decoration-line: none;
@@ -209,4 +338,41 @@ $yellow: #E3B873;
     br {
         display: none;
     }
+    .scroll {
+        display: none;
+    }
+    .completed-projects {
+        &__cities {
+            display: none;
+        }
+        &__images {
+            display: none;
+        }
+        &__data {
+            padding-left: 0%;
+            text-align: left;
+            height: 1000px;
+        }
+        &__data h2 {
+            font-size: 29px;
+            text-align: center;
+            padding-top: 15px;
+        }
+        &__data h3 {
+            font-size: 17px;
+        } 
+        &__grid {
+            padding: 18px;
+        }
+        &__grid p {
+            font-size: 14px;
+        }
+        &__grid-item-1 p {
+            font-size: 13.5px !important;
+            text-align: center;
+        }
+        &__carousel-points {
+            display: none;
+        }
+    }    
 }
