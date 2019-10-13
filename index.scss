@@ -173,6 +173,8 @@ $yellow: #E3B873;
 }
 .completed-projects {
     background-color: #131313;
+    border-bottom: 3px solid #131313;
+
     &__row {
         display: flex;
     } 
@@ -282,12 +284,92 @@ $yellow: #E3B873;
     &__arrow:hover {
         cursor: pointer;
     }
+    &__icon {
+        padding-top: 90px;
+    }
+    &__icon h4 {
+        color: #FFFFFF;
+        font-family: "Yeseva One", "Arial", sans-serif;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        text-transform: uppercase; 
+    }
+    &__video-icon {
+        @extend %flex;
+        justify-content: center;
+    }
+    &__video-icon img {
+        padding: 15px;
+    }
 }
 .yellow-line {
     background-color: $yellow;
-    width: 51px;
+    width: 30px;
     height: 1px;
 }
+.iframe {
+    @extend %flex;
+    justify-content: center;
+}
+.form {
+    &__description {
+        width: 54%;
+        font-family: "FuturaBookC", "Roboto", sans-serif;
+        font-size: 20px;
+        line-height: 34px;
+        text-align: center;
+        color: #363636;
+        margin-left: 25%;
+    }
+    &__yellow-line {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 50%;
+        width: 50px;
+    }
+}
+.submit-button {
+    border: 0;
+    border-radius: 5px;
+    background-color: #E3B873;
+}
+.form-input {
+    border: 0;
+    border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+    font-family: "FuturaBookC", "Roboto", sans-serif;
+    color: #363636;
+    font-size: 18px;
+    line-height: 24px;
+}
+.submit-form {
+    margin-top: 7%;
+    margin-left: 28%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 780px;
+    
+    &__item {
+    font-family: "FuturaBookC", "Roboto", sans-serif;
+    color: rgba(54, 54, 54, 0.5);
+    font-size: 15px;
+    line-height: 20px;  
+    }
+}
+.check-box {
+    font-family: "FuturaBookC", "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    color: #181818;
+    margin-top: 20px;
+    margin-left: 40%;
+}
+.check-box-mobile {
+    display: none;
+}
+
+ /* MOBILE */ 
 
 @media (max-width: 375px) {
     .header {
@@ -351,7 +433,7 @@ $yellow: #E3B873;
         &__data {
             padding-left: 0%;
             text-align: left;
-            height: 1000px;
+            height: 700px;
         }
         &__data h2 {
             font-size: 29px;
@@ -374,5 +456,45 @@ $yellow: #E3B873;
         &__carousel-points {
             display: none;
         }
+    }  
+    .form {
+        background-color: #131313;
+
+        &__description {
+            width: 90%;
+            margin: 0;
+            color: #fff;
+            font-size: 14px;
+            padding: 15px;
+        }  
     }    
+    .yellow-line {
+        margin-top: 0;
+        margin-left: 45%;
+    }
+    .submit-form {
+        width: 90%;
+        margin-left: 0;
+        display: block;
+        padding: 20px;
+
+        &__item{
+            color: rgba(255, 255, 255, 0.5);
+            display: grid;
+            padding-bottom: 40px;
+        }
+    }
+    .form-input {
+        border-bottom: 1px solid white;
+        color: #fff;
+        background-color: #131313;
+    }
+    .check-box {
+        display: none;
+    }
+    .check-box-mobile {
+        color: #fff;
+        display: block;
+    }
+
 }
