@@ -156,8 +156,9 @@
 .top-offer {
   background-image: url(assets/top-image.png);
   background-repeat: no-repeat;
+  background-size: cover;
   padding-top: 13%;
-  padding-bottom: 16%;
+  padding-bottom: 13%;
   padding-left: 5%;
 }
 
@@ -396,6 +397,10 @@
           justify-content: center;
 }
 
+.form {
+  margin-bottom: 50px;
+}
+
 .form__description {
   width: 54%;
   font-family: "FuturaBookC", "Roboto", sans-serif;
@@ -461,6 +466,67 @@
 
 .check-box-mobile {
   display: none;
+}
+
+.repair-types {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 20px;
+  margin-bottom: 200px;
+}
+
+.repair-types__block {
+  position: relative;
+  width: 392px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.repair-types .first {
+  background-image: url(assets/type1.png);
+}
+
+.repair-types .second {
+  background-image: url(assets/type2.png);
+}
+
+.repair-types .third {
+  background-image: url(assets/type3.png);
+}
+
+.repair-types ul {
+  list-style: inside;
+}
+
+.repair-types__text {
+  background-color: #FFFFFF;
+  font-family: "FuturaBookC", "Roboto", sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  color: #959595;
+  width: 250px;
+  padding: 20px;
+  margin-top: 180px;
+}
+
+.repair-types .bottom {
+  position: absolute;
+  bottom: -180px;
+}
+
+.repair-types__text h3 {
+  font-size: 18px;
+  line-height: 25px;
+  color: #363636;
+  font-family: "Yeseva One", "Arial", sans-serif;
 }
 
 /* MOBILE */
@@ -584,6 +650,21 @@
   .check-box-mobile {
     color: #fff;
     display: block;
+  }
+  .repair-types {
+    display: block;
+    margin: 0;
+  }
+  .repair-types .bottom {
+    position: relative;
+    bottom: 0px;
+  }
+  .repair-types__block {
+    width: 360px;
+    margin: 10px;
+  }
+  .repair-types .submit-button {
+    display: none;
   }
 }
 /*# sourceMappingURL=index.css.map */
